@@ -3,13 +3,27 @@ name: Run tests
 
 on:  # yamllint disable-line rule:truthy
   push:
-    branches: ['main']
+    branches:
+      - "**"
+    tags:
+      - "**"
   pull_request:
-  workflow_dispatch:
+    branches:
+      - main
 
 jobs:
   pytest:
-    uses: colcon/ci/.github/workflows/pytest.yaml@main
+    uses: taughz/colcon-ci/.github/workflows/pytest.yaml@main
+    with:
+      strategy-os: |
+        macos-latest
+        ubuntu-22.04
+      strategy-python: |
+        3.10
+        3.11
+        3.12
+      strategy-include-py36: false
+      strategy-include-stdeb: false
   yamllint:
     runs-on: ubuntu-latest
     steps:
