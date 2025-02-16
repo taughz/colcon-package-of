@@ -1,0 +1,9 @@
+# test/integration/requirements.txt
+
+PyYAML==6.0.2
+argcomplete==3.5.2
+colcon-core==0.18.4
+colcon-package-information==0.4.0
+colcon-recursive-crawl==0.2.3
+colcon-ros==0.5.0
+empy==3.3.4

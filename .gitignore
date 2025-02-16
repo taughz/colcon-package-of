@@ -3,4 +3,6 @@
 /COLCON_IGNORE
 /build/
 /dist/
+/test/integration/.venv/
+/test/integration/mockws/
 __pycache__/
